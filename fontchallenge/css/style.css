@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'abril_fatfaceregular';
+    src: url('../font/abrilfatface-regular-webfont.woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+.top-half {
+  width: 1280px;
+  height: 360px;
+  margin: 0 auto;
+  background-color: white;
+
+}
+
+.middle {
+	position: absolute;
+    top: 352px;
+    left: 400px;
+}
+
+.halfStyle {
+    position:relative;
+    display:inline-block;
+    font-size:100px; /* or any font size will work */
+    color: red; /* hide the base character */
+    overflow:hidden;
+    /*white-space: pre; /* to preserve the spaces from collapsing */
+}
+.halfStyle:before { /* creates the top part */
+    display:block;
+    z-index:2;
+    position:absolute;
+    top:0;
+    height: 55%;
+    content: attr(data-content); /* dynamic content for the pseudo element */
+    overflow:hidden;
+    pointer-events: none; /* so the base char is selectable by mouse */
+    color: black; /* for demo purposes */
+    /*text-shadow: 2px -2px 0px #af0; /* for demo purposes */
+}
+.halfStyle:after { /* creates the bottom part */
+    display:block;
+    position:absolute;
+    z-index:1;
+    top:0;
+    height: 100%;
+    content: attr(data-content); /* dynamic content for the pseudo element */
+    overflow:hidden;
+    pointer-events: none; /* so the base char is selectable by mouse */
+    color: white; /* for demo purposes */
+    /*text-shadow: 2px 2px 0px #0af; /* for demo purposes */
+}
+
+.bottom-half {
+  width: 1280px;
+  height: 360px;
+  margin: 0 auto;
+  background-color: black;
+
+}
+
+#top-small-print {
+ font-size: 30px;
+ color: black;
+ font-family: 'abril_fatfaceregular';
+ text-transform: uppercase;
+ padding: 110px 920px 0px 90px;
+}
+
+.top-big-print {
+    font-size: 120px;
+    color: black;
+    font-family: 'abril_fatfaceregular';
+    padding: 0px 310px 0px 80px;
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
+
+.top-small-print {
+    font-size: 30px;
+    color: black;
+    font-family: 'abril_fatfaceregular';
+    text-transform: uppercase;
+    padding-left: 190px;
+    padding-top: -5px;
+    padding-right: 820px;
+    padding-bottom: 100px;
+ }
+ 
+ div {
+    position: relative;
+    color: black;
+    font-size: 120px;
+    font-family: 'abril_fatfaceregular';
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+}
+
+/*div span {
+    height: 50%;
+    position: absolute;
+    color: white;
+    overflow: hidden;
+
+}*/
+
+ #bottom-small-print {
+  font-size: 36px;
+  color: white;
+  font-family: 'abril_fatfaceregular';
+  text-transform: uppercase;
+  padding: 90px 920px 5px 80px;
+ }
+
+ #bottom-big-print {
+     font-size: 120px;
+     color: white;
+     font-family: 'abril_fatfaceregular';
+     padding: 0px 0px 5px 80px;
+     margin-bottom: -100px;
+     margin-top: -80px;
+   }
+
+#side-script-bottom {
+    font-size: 36px;
+    color: white;
+    padding-left: 850px;
+    padding-bottom: 500px;
+    margin-top: -150px;;
+  }
